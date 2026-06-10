@@ -1,0 +1,30 @@
+/* App-level styles */
+
+/* Landing page mobile responsive overrides */
+@media (max-width: 768px) {
+  /* Hero: stack phone mockups below text */
+  section > div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Hide the second phone in the hero cluster on mobile */
+  section:first-of-type div[style*="rotate(-6deg)"] ~ div {
+    display: none;
+  }
+
+  /* Reduce hero padding on mobile */
+  section[style*="padding: 100px 40px"] {
+    padding: 60px 20px !important;
+  }
+
+  /* Reduce h2 font sizes */
+  h2[style*="font-size: 38px"] {
+    font-size: 28px !important;
+  }
+}
+
+/* Pulse animation for hero badge dot */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.3); }
+}
